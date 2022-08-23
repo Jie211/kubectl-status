@@ -14,12 +14,13 @@ builds:
       - darwin
     goarch:
       - amd64
+      - arm64
     env:
       - CGO_ENABLED=0
       - GO111MODULE=on
     main: cmd/plugin/main.go
     ldflags: -s -w
-      -X github.com/bergerx/kubectl-status/cmd/plugin/cli.version={{ trimprefix .Summary "v" }}
+      -X github.com/jie211/kubectl-status/cmd/plugin/cli.version={{ trimprefix .Summary "v" }}
 archives:
   - id: status
     builds:
